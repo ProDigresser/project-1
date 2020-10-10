@@ -38,7 +38,7 @@ function startGame() {
     cell.addEventListener('click', () => {
       // const id = Number(cell.id)
       // console.log(cell)
-
+      let bombCount = null
 
       // ! DRY adjacent checkers 
       const idLeft = Number(cell.id) - 1
@@ -107,8 +107,6 @@ function startGame() {
           topLeft(); top(); topRight(); right(); bottomRight(); bottom(); bottomLeft(); left()
           cell.classList.add('safe')
           cell.innerHTML = bombCount
-
-          //  mineCheck(idTopRight); mineCheck(idRight); mineCheck(idBottomRight); mineCheck(idBottom); mineCheck(idBottomLeft); mineCheck(idLeft); mineCheck(idTopLeft)
         }
 
 
@@ -123,6 +121,7 @@ function startGame() {
           const cellTopRight = document.getElementById(idTopRight)
           cell.classList.add('noBombs')
           cell.innerHTML = bombCount
+
           if (Number(cell.id) === boundTopLeft) {
             mineCheck(cellRight); mineCheck(cellBottomRight); mineCheck(cellBottom)
           } else if (Number(cell.id) === boundTopRight) {
@@ -142,8 +141,6 @@ function startGame() {
           } else {
             mineCheck(cellTop); mineCheck(cellTopLeft); mineCheck(cellLeft); mineCheck(cellBottomLeft); mineCheck(cellBottom); mineCheck(cellBottomRight); mineCheck(cellRight); mineCheck(cellTopRight)
           }
-
-
 
 
         }
@@ -203,7 +200,7 @@ function startGame() {
       bombCount = null
 
     })
-    let bombCount = null
+
   })
 }
 
