@@ -6,29 +6,43 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  margin: 0
-
+  flex-direction: row-reverse;
+  margin: 30px;
 }
 
 header {
   padding: 10px;
-  margin: 10px 10px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  border: solid black 1px;
+  margin: 20px;
 }
 
-h1{
-  margin: 10px 0 0;
+h1 {
+  margin: 40px 0;
+  font-size: 40px;
 }
 
 .button {
   margin: 10px 10px 0;
   height: 25px;
   width: 50px;
+}
 
+.sushi-board {
+  width: 220px;
+  height: auto;
+}
+
+.game-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #F8C386;
 }
 
 main {
@@ -37,26 +51,573 @@ main {
   width: 600px;
   height: 600px;
   flex-wrap: wrap;
-  margin: 0 0 30px;
-  background-color: brown;
+  margin: 0;
 }
 
 .cell {
   height: 5%;
   width: 5%;
-  background-color: green;
-  border: solid black 2px;;
+  background-color: #BBBBBB;
+  border: solid darkcyan 2px;
+  border-radius: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-position: center center;
+  background-size: contain;
 }
 
 .cell.safe {
-  background-color: aliceblue;
+  background-color: white
 }
 
-
-.bomb/*.reveal*/ {
+.bomb.reveal {
   background-color: red;
+}
+
+.cell.flag {
+  border-color: red;
+  background-image: url(/Users/laurencewalshe/development/project-1/images/pepper.jpg);
+  background-size: contain;
+}
+
+.bg-0 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile1.png);
+}
+
+.bg-1 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile2.png);
+}
+
+.bg-2 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile3.png);
+}
+
+.bg-3 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile4.png);
+}
+
+.bg-4 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile5.png);
+}
+
+.bg-5 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile5.png);
+}
+
+.bg-6 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile6.png);
+}
+
+.bg-7 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile7.png);
+}
+
+.bg-8 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile8.png);
+}
+
+.bg-9 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile9.png);
+}
+
+.bg-10 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile10.png);
+}
+
+.bg-11 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile11.png);
+}
+
+.bg-12 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile12.png);
+}
+
+.bg-13 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile13.png);
+}
+
+.bg-14 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile14.png);
+}
+
+.bg-15 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile15.png);
+}
+
+.bg-16 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile16.png);
+}
+
+.bg-17 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile17.png);
+}
+
+.bg-18 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile18.png);
+}
+
+.bg-19 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile19.png);
+}
+
+.bg-20 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile20.png);
+}
+
+.bg-21 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile21.png);
+}
+
+.bg-22 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile22.png);
+}
+
+.bg-23 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile23.png);
+}
+
+.bg-24 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile24.png);
+}
+
+.bg-25 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile25.png);
+}
+
+.bg-26 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile26.png);
+}
+
+.bg-27 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile27.png);
+}
+
+.bg-28 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile28.png);
+}
+
+.bg-29 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile29.png);
+}
+
+.bg-30 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile30.png);
+}
+
+.bg-31 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile31.png);
+}
+
+.bg-32 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile32.png);
+}
+
+.bg-33 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile33.png);
+}
+
+.bg-34 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile34.png);
+}
+
+.bg-35 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile35.png);
+}
+
+.bg-36 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile36.png);
+}
+
+.bg-37 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile37.png);
+}
+
+.bg-38 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile38.png);
+}
+
+.bg-39 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile39.png);
+}
+
+.bg-40 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile40.png);
+}
+
+.bg-41 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile41.png);
+}
+
+.bg-42 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile42.png);
+}
+
+.bg-43 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile43.png);
+}
+
+.bg-44 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile44.png);
+}
+
+.bg-45 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile45.png);
+}
+
+.bg-46 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile46.png);
+}
+
+.bg-47 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile47.png);
+}
+
+.bg-48 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile48.png);
+}
+
+.bg-49 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile49.png);
+}
+
+.bg-50 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile50.png);
+}
+
+.bg-51 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile51.png);
+}
+
+.bg-52 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile52.png);
+}
+
+.bg-53 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile53.png);
+}
+
+.bg-54 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile54.png);
+}
+
+.bg-55 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile55.png);
+}
+
+.bg-56 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile56.png);
+}
+
+.bg-57 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile57.png);
+}
+
+.bg-58 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile58.png);
+}
+
+.bg-59 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile59.png);
+}
+
+.bg-60 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile60.png);
+}
+
+.bg-61 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile61.png);
+}
+
+.bg-62 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile62.png);
+}
+
+.bg-63 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile63.png);
+}
+
+.bg-64 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile64.png);
+}
+
+.bg-65 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile65.png);
+}
+
+.bg-66 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile66.png);
+}
+
+.bg-67 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile67.png);
+}
+
+.bg-68 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile68.png);
+}
+
+.bg-69 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile69.png);
+}
+
+.bg-70 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile70.png);
+}
+
+.bg-71 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile71.png);
+}
+
+.bg-72 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile72.png);
+}
+
+.bg-73 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile73.png);
+}
+
+.bg-74 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile74.png);
+}
+
+.bg-75 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile75.png);
+}
+
+.bg-76 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile76.png);
+}
+
+.bg-77 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile77.png);
+}
+
+.bg-78 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile78.png);
+}
+
+.bg-79 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile79.png);
+}
+
+.bg-80 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile80.png);
+}
+
+.bg-81 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile81.png);
+}
+
+.bg-82 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile82.png);
+}
+
+.bg-83 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile83.png);
+}
+
+.bg-84 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile84.png);
+}
+
+.bg-85 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile85.png);
+}
+
+.bg-86 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile86.png);
+}
+
+.bg-87 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile87.png);
+}
+
+.bg-88 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile88.png);
+}
+
+.bg-89 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile89.png);
+}
+
+.bg-90 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile90.png);
+}
+
+.bg-91 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile91.png);
+}
+
+.bg-92 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile92.png);
+}
+
+.bg-93 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile93.png);
+}
+
+.bg-94 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile94.png);
+}
+
+.bg-95 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile95.png);
+}
+
+.bg-96 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile96.png);
+}
+
+.bg-97 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile97.png);
+}
+
+.bg-98 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile98.png);
+}
+
+.bg-99 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile99.png);
+}
+
+.bg-100 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile100.png);
+}
+
+.bg-101 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile101.png);
+}
+
+.bg-102 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile102.png);
+}
+
+.bg-103 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile103.png);
+}
+
+.bg-104 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile104.png);
+}
+
+.bg-105 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile105.png);
+}
+
+.bg-106 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile106.png);
+}
+
+.bg-107 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile107.png);
+}
+
+.bg-108 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile108.png);
+}
+
+.bg-109 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile109.png);
+}
+
+.bg-110 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile110.png);
+}
+
+.bg-111 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile111.png);
+}
+
+.bg-112 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile112.png);
+}
+
+.bg-113 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile113.png);
+}
+
+.bg-114 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile114.png);
+}
+
+.bg-115 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile115.png);
+}
+
+.bg-116 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile116.png);
+}
+
+.bg-117 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile117.png);
+}
+
+.bg-118 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile118.png);
+}
+
+.bg-119 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile119.png);
+}
+
+.bg-120 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile120.png);
+}
+
+.bg-121 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile121.png);
+}
+
+.bg-122 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile122.png);
+}
+
+.bg-123 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile123.png);
+}
+
+.bg-124 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile124.png);
+}
+
+.bg-125 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile125.png);
+}
+
+.bg-126 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile126.png);
+}
+
+.bg-127 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile127.png);
+}
+
+.bg-128 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile128.png);
+}
+
+.bg-129 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile129.png);
+}
+
+.bg-130 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile130.png);
+}
+
+.bg-131 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile131.png);
+}
+
+.bg-132 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile132.png);
+}
+
+.bg-133 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile133.png);
+}
+
+.bg-134 {
+  background-image: url(/Users/laurencewalshe/development/project-1/sushi_sprites/tile134.png);
 }
