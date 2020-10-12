@@ -36,9 +36,7 @@ function startGame() {
   // ! This listens to each cell for a click
   cellArray.forEach(cell => {
     cell.addEventListener('click', () => {
-      // const id = Number(cell.id)
-      // console.log(cell)
-      let bombCount = null
+
 
       // ! DRY adjacent checkers 
       const idLeft = Number(cell.id) - 1
@@ -50,158 +48,174 @@ function startGame() {
       const idBottom = Number(cell.id) + width
       const idBottomLeft = Number(cell.id) + width - 1
 
+      // ! This grabs adjacent cells
+      const cellTop = document.getElementById(idTop)
+      const cellTopLeft = document.getElementById(idTopLeft)
+      const cellLeft = document.getElementById(idLeft)
+      const cellBottomLeft = document.getElementById(idBottomLeft)
+      const cellBottom = document.getElementById(idBottom)
+      const cellBottomRight = document.getElementById(idBottomRight)
+      const cellRight = document.getElementById(idRight)
+      const cellTopRight = document.getElementById(idTopRight)
+
       // ! DRY boundry checkers
       const boundTopLeft = 0
       const boundTopRight = width - 1
       const boundBottomRight = (width ** 2) - 1
       const boundBottomLeft = width ** 2 - width
 
-      // ! This checks for mines
-      if (cell.classList.contains('bomb')) {
-        alert('Boom!')
-        cell.classList.add('reveal')
-
-      } else {
-        mineCheck(cell)
-
-      }
 
       // ! This checks for valid cells to check for mines
 
       function mineCheck(cell) {
-        // cell = document.getElementById(id)
-        // console.log(cell)
+        let bombCount = null
+        // cell = document.getElementById(cell.id)
+        cell.classList.add('safe')
+
         if (Number(cell.id) === boundTopLeft) {
           right(); bottomRight(); bottom()
-          cell.classList.add('safe')
-          cell.innerHTML = bombCount
+
         } else if (Number(cell.id) === boundTopRight) {
           bottom(); bottomLeft(); left()
-          cell.classList.add('safe')
-          cell.innerHTML = bombCount
+
         } else if (Number(cell.id) === boundBottomLeft) {
           right(); topRight(); top()
-          cell.classList.add('safe')
-          cell.innerHTML = bombCount
+
         } else if (Number(cell.id) === boundBottomRight) {
           top(); topLeft(); left()
-          cell.classList.add('safe')
-          cell.innerHTML = bombCount
+
         } else if (Number(cell.id) < width) {
           right(); bottomRight(); bottom(); bottomLeft(); left()
-          cell.classList.add('safe')
-          cell.innerHTML = bombCount
+
         } else if (Number(cell.id) % width === width - 1) {
           top(); bottom(); bottomLeft(); left(); topLeft()
-          cell.classList.add('safe')
-          cell.innerHTML = bombCount
+
         } else if (Number(cell.id) > (width ** 2) - width - 1) {
           right(); topRight(); top(); topLeft(); left()
-          cell.innerHTML = bombCount
-          cell.classList.add('safe')
+
         } else if (Number(cell.id) % width === 0) {
           top(); topRight(); right(); bottomRight(); bottom()
-          cell.classList.add('safe')
-          cell.innerHTML = bombCount
+
         } else {
+
           topLeft(); top(); topRight(); right(); bottomRight(); bottom(); bottomLeft(); left()
-          cell.classList.add('safe')
-          cell.innerHTML = bombCount
-        }
 
+          if (bombCount !== null) {
+            cell.classList.add('safe')
+            cell.innerHTML = bombCount
 
-        if (bombCount === null && !cell.classList.contains('noBombs') || !cell.classList.contains('safe')) {
-          const cellTop = document.getElementById(idTop)
-          const cellTopLeft = document.getElementById(idTopLeft)
-          const cellLeft = document.getElementById(idLeft)
-          const cellBottomLeft = document.getElementById(idBottomLeft)
-          const cellBottom = document.getElementById(idBottom)
-          const cellBottomRight = document.getElementById(idBottomRight)
-          const cellRight = document.getElementById(idRight)
-          const cellTopRight = document.getElementById(idTopRight)
-          cell.classList.add('noBombs')
-          cell.innerHTML = bombCount
-
-          if (Number(cell.id) === boundTopLeft) {
-            mineCheck(cellRight); mineCheck(cellBottomRight); mineCheck(cellBottom)
-          } else if (Number(cell.id) === boundTopRight) {
-            mineCheck(cellBottom); mineCheck(cellBottomLeft); mineCheck(cellLeft)
-          } else if (Number(cell.id) === boundBottomLeft) {
-            mineCheck(cellRight); mineCheck(cellTopRight); mineCheck(cellTop)
-          } else if (Number(cell.id) === boundBottomRight) {
-            mineCheck(cellLeft); mineCheck(cellTopLeft); mineCheck(cellRight)
-          } else if (Number(cell.id) < width) {
-            mineCheck(cellRight); mineCheck(cellBottomRight); mineCheck(cellBottom); mineCheck(cellBottomLeft); mineCheck(cellLeft)
-          } else if (Number(cell.id) % width === width - 1) {
-            mineCheck(cellTop); mineCheck(cellBottom); mineCheck(cellBottomLeft); mineCheck(cellLeft); mineCheck(cellTopLeft)
-          } else if (Number(cell.id) > (width ** 2) - width - 1) {
-            mineCheck(cellRight); mineCheck(cellTopRight); mineCheck(cellTop); mineCheck(cellTopLeft); mineCheck(cellLeft)
-          } else if (Number(cell.id) % width === 0) {
-            mineCheck(cellTop); mineCheck(cellTopRight); mineCheck(cellRight); mineCheck(cellBottomRight); mineCheck(cellBottom)
           } else {
-            mineCheck(cellTop); mineCheck(cellTopLeft); mineCheck(cellLeft); mineCheck(cellBottomLeft); mineCheck(cellBottom); mineCheck(cellBottomRight); mineCheck(cellRight); mineCheck(cellTopRight)
+
+            if (!cellTop.classList.contains('noBombs') && !cellTop.classList.contains('safe')) {
+              // cellTop.classList.add('noBombs')
+              // cell.classList.add('noBombs')
+              mineCheck(cellTop)
+
+            }
+            if (!cellTopLeft.classList.contains('noBombs') && !cellTopLeft.classList.contains('safe')) {
+              // cellTopLeft.classList.add('noBombs')
+              // cell.classList.add('noBombs')
+              mineCheck(cellTopLeft)
+
+            }
+            if (!cellLeft.classList.contains('noBombs') && !cellLeft.classList.contains('safe')) {
+              // cellLeft.classList.add('noBombs')
+              // cell.classList.add('noBombs')
+              mineCheck(cellLeft)
+
+            }
+            if (!cellBottomLeft.classList.contains('noBombs') && !cellBottomLeft.classList.contains('safe')) {
+              // cellBottomLeft.classList.add('noBombs')
+              // cell.classList.add('noBombs')
+              mineCheck(cellBottomLeft)
+
+            }
+            if (!cellBottom.classList.contains('noBombs') && !cellBottom.classList.contains('safe')) {
+              // cellBottom.classList.add('noBombs')
+              // cell.classList.add('noBombs')
+              mineCheck(cellBottom)
+
+            }
+            if (!cellBottomRight.classList.contains('noBombs') && !cellBottomRight.classList.contains('safe')) {
+              // cellBottomRight.classList.add('noBombs')
+              // cell.classList.add('noBombs')
+              mineCheck(cellBottomRight)
+
+            }
+            if (!cellRight.classList.contains('noBombs') && !cellRight.classList.contains('safe')) {
+              // cellRight.classList.add('noBombs')
+              // cell.classList.add('noBombs')
+              mineCheck(cellRight)
+
+            }
+            if (!cellTopRight.classList.contains('noBombs') && !cellTopRight.classList.contains('safe')) {
+              // cellTopRight.classList.add('noBombs')
+              // cell.classList.add('noBombs')
+              mineCheck(cellTopRight)
+
+            }
+            cell.innerHTML = bombCount
+
           }
 
-
         }
-
-
-        bombCount = null
-
-      }
-
-
-      // ! This checks valid cells and adds to the mine count
-      function topLeft() {
-        if (cellArray[idTopLeft].classList.contains('bomb')) {
-          bombCount += 1
+        
+        // ! This checks valid cells and adds to the mine count
+        function topLeft() {
+          if (cellArray[idTopLeft].classList.contains('bomb')) {
+            bombCount += 1
+          }
         }
-      }
-      function top() {
-        if (cellArray[idTop].classList.contains('bomb')) {
-          bombCount += 1
+        function top() {
+          if (cellArray[idTop].classList.contains('bomb')) {
+            bombCount += 1
+          }
         }
-      }
-      function topRight() {
-        if (cellArray[idTopRight].classList.contains('bomb')) {
-          bombCount += 1
+        function topRight() {
+          if (cellArray[idTopRight].classList.contains('bomb')) {
+            bombCount += 1
+          }
         }
-      }
-      function right() {
-        if (cellArray[idRight].classList.contains('bomb')) {
-          bombCount += 1
+        function right() {
+          if (cellArray[idRight].classList.contains('bomb')) {
+            bombCount += 1
+          }
         }
-      }
-      function bottomRight() {
-        if (cellArray[idBottomRight].classList.contains('bomb')) {
-          bombCount += 1
+        function bottomRight() {
+          if (cellArray[idBottomRight].classList.contains('bomb')) {
+            bombCount += 1
+          }
         }
-      }
-      function bottom() {
-        if (cellArray[idBottom].classList.contains('bomb')) {
-          bombCount += 1
+        function bottom() {
+          if (cellArray[idBottom].classList.contains('bomb')) {
+            bombCount += 1
+          }
         }
-      }
-      function bottomLeft() {
-        if (cellArray[idBottomLeft].classList.contains('bomb')) {
-          bombCount += 1
+        function bottomLeft() {
+          if (cellArray[idBottomLeft].classList.contains('bomb')) {
+            bombCount += 1
+          }
         }
-      }
-      function left() {
-        if (cellArray[idLeft].classList.contains('bomb')) {
-          bombCount += 1
+        function left() {
+          if (cellArray[idLeft].classList.contains('bomb')) {
+            bombCount += 1
+          }
         }
       }
 
-      // function cascade() {
-
-      // }
-
-      bombCount = null
+      // ! This checks for mines
+      if (cell.classList.contains('bomb')) {
+        alert('Boom!')
+        cell.classList.add('reveal')
+      } else {
+        console.log(cell)
+        mineCheck(cell)
+      }
 
     })
 
   })
+
 }
 
 
