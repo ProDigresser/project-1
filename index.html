@@ -5,26 +5,54 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles/style.css">
-  <title>Document</title>
+  <title>Sushi Sweeper</title>
 </head>
 
-<header>
-  <h1>Sushi<br>Sweeper</h1>
-  <div class="buttons">
-    <button class="button" id="start">Start</button>
-    <button class="button" id="reset">Reset</button>
-  </div>
-  <img class="sushi-board" src="images/iso_sushi_board.png" alt="Sushi Board">
-</header>
+<body>
+  <header>
+    <form action="selection">
+      <h1>Sushi<br>Sweeper</h1>
+      <div class="buttons">
+        <button class="button" id="start">Order</button>
+        <button class="button" id="reset">Send Back</button><br>
+        <button class="button" id="high-score">High Scores!</button>
+      </div>
+      <div class="switches">
+        <h3>Sushi Selection:</h3>
+        <label for="size"> <input type="radio" checked class="size" name="size" id="small"> Bento</label><br>
+        <label for="size"> <input type="radio" class="size" name="size" id="medium"> Platter</label><br>
+        <label for="size"> <input type="radio" class="size" name="size" id="lage"> Banquet</label>
+        <h3>Spice Level:</h3>
+        <label for="spice"><input type="radio" checked class="spice" name="spice" id="easy">Mild</label><br>
+        <label for="spice"><input type="radio" class="spice" name="spice" id="normal">Medium</label><br>
+        <label for="spice"><input type="radio" class="spice" name="spice" id="hard">Extra-Spicy</label>
+      </div>
+      <div class="game-details">
+        <div class="details"><p>Score:</p> <div class="numbers"><span id="score"></span></div></div>
+        <div class="details"><p>Timer:</p> <div class="numbers"><span id="timer"></span></div></div>
+        <div class="details"><p>Wasabi:</p> <div class="numbers"><span id="mines"></span></div></div>
+      </div>
 
-<section class="game-section">
-  <body>
+    </form>
+
+    <div class="logo-box">
+      <div class="score-board">
+        <h2>Sushi Champs!</h2>
+        <ol class="winners"></ol>
+      </div>
+      <img class="sushi-board" src="images/iso_sushi_logo.png" alt="Sushi Board">
+      <small><a target="_blank"
+          href="mailto:hello@laurencewalshe.dev?subject=I Love Sushi!&body=Hello Laurence, Genius game. Are you available to discuss your next project?">hello@laurencewlashe.dev</a></small>
+    </div>
+    
+  </header>
+
+  <section class="game-section">
     <main class="grid">
 
     </main>
     <script src="scripts/app.js"></script>
-  </body>
-</section>
-
+  </section>
+</body>
 
 </html>
