@@ -111,7 +111,7 @@ p {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: centercd;
+  justify-content: center;
   margin: 5px 0;
 }
 

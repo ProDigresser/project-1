@@ -155,7 +155,7 @@ function startGame() {
           }
            
           setTimeout(function () {
-            alert(`Congradulatoins! You ate all the sushi. \n Your final score is ${finalScore}!`)
+            alert(`Congratulations! You ate all the sushi. \n Your final score is ${finalScore}!`)
             if (highScores.length < 3 || finalScore > Number(highScores[2].score)) {
               highScoreInput()
             }
