@@ -117,7 +117,7 @@ function startGame() {
         const cellRight = document.getElementById(idRight)
         const cellTopRight = document.getElementById(idTopRight)
 
-        // ! DRY boundry checkers
+        // ! DRY boundary checkers
         const boundTopLeft = 0
         const boundTopRight = width - 1
         const boundBottomRight = (width ** 2) - 1
@@ -338,7 +338,7 @@ function startGame() {
           }
         })
         setTimeout(function () {
-          alert('Gome Over! You ate too much wasabi.')
+          alert('Game Over! You ate too much wasabi.')
           finalScore = score
           console.log(highScores.length)
           if (highScores.length < 3 || finalScore > Number(highScores[2].score)) {
