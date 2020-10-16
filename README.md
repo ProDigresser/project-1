@@ -5,12 +5,12 @@ General Assembly Project 1
 # Project 1 - Sushi Sweeper
 
 		
-		  _________            .__    .__    _________                                          
-		 /   _____/__ __  _____|  |__ |__|  /   _____/_  _  __ ____   ____ ______   ___________ 
-		 \_____  \|  |  \/  ___/  |  \|  |  \_____  \\ \/ \/ // __ \_/ __ \\____ \_/ __ \_  __ \
-		 /        \  |  /\___ \|   Y  \  |  /        \\     /\  ___/\  ___/|  |_> >  ___/|  | \/
-		/_______  /____//____  >___|  /__| /_______  / \/\_/  \___  >\___  >   __/ \___  >__|   
-		        \/           \/     \/             \/             \/     \/|__|        \/       
+	  _________            .__    .__    _________                                          
+	 /   _____/__ __  _____|  |__ |__|  /   _____/_  _  __ ____   ____ ______   ___________ 
+	 \_____  \|  |  \/  ___/  |  \|  |  \_____  \\ \/ \/ // __ \_/ __ \\____ \_/ __ \_  __ \
+	 /        \  |  /\___ \|   Y  \  |  /        \\     /\  ___/\  ___/|  |_> >  ___/|  | \/
+	/_______  /____//____  >___|  /__| /_______  / \/\_/  \___  >\___  >   __/ \___  >__|   
+	        \/           \/     \/             \/             \/     \/|__|        \/       
 
 
 ## The Overview
@@ -238,7 +238,7 @@ In keeping with the chosen theme and style of game I think a minimal 'takeaway m
 Adjusting the menu to reveal the game details works well for the game too -  including a timer, game score and the number of unflagged mines.
 
 ## In Conclusion
-### Future Features]
+### Future Features
 
 1. Fix scoreboard to display 'Top 3'
 2. Add responsive features to screen sizes, including a landscape menu.
