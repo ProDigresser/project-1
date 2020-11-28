@@ -18,7 +18,7 @@ The task was to choose from a set of grid based games that could utilise array b
 
 I took to Minesweeper to challenge my knowledge of recursive logic and functions.
 
-You can play my game here: ***[Sushi Sweeper](https://prodigresser.github.io/project-1/)***
+You can play my game here: ***[Sushi Sweeper 🍣](https://prodigresser.github.io/project-1/)***
 
 ### What is Minesweeper? (Sushi Sweeper)
 Minesweeper is a classic Windows PC game. The idea is to decide which tile mines are hidden under based on numbered clues hidden under the remaining tiles -
