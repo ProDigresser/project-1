@@ -1,16 +1,14 @@
-# project-1
-General Assembly Project 1
 ![ga_cog_large_red_rgb](https://cloud.githubusercontent.com/assets/40461/8183776/469f976e-1432-11e5-8199-6ac91363302b.png)
 ### General Assembly Software Engineering Immersive 
 # Project 1 - Sushi Sweeper
 
 		
-		  _________            .__    .__    _________                                          
-		 /   _____/__ __  _____|  |__ |__|  /   _____/_  _  __ ____   ____ ______   ___________ 
-		 \_____  \|  |  \/  ___/  |  \|  |  \_____  \\ \/ \/ // __ \_/ __ \\____ \_/ __ \_  __ \
-		 /        \  |  /\___ \|   Y  \  |  /        \\     /\  ___/\  ___/|  |_> >  ___/|  | \/
-		/_______  /____//____  >___|  /__| /_______  / \/\_/  \___  >\___  >   __/ \___  >__|   
-		        \/           \/     \/             \/             \/     \/|__|        \/       
+	  _________            .__    .__    _________                                          
+	 /   _____/__ __  _____|  |__ |__|  /   _____/_  _  __ ____   ____ ______   ___________ 
+	 \_____  \|  |  \/  ___/  |  \|  |  \_____  \\ \/ \/ // __ \_/ __ \\____ \_/ __ \_  __ \
+	 /        \  |  /\___ \|   Y  \  |  /        \\     /\  ___/\  ___/|  |_> >  ___/|  | \/
+	/_______  /____//____  >___|  /__| /_______  / \/\_/  \___  >\___  >   __/ \___  >__|   
+	        \/           \/     \/             \/             \/     \/|__|        \/       
 
 
 ## The Overview
@@ -20,7 +18,7 @@ The task was to choose from a set of grid based games that could utilise array b
 
 I took to Minesweeper to challenge my knowledge of recursive logic and functions.
 
-You can play my game here: ***[Sushi Sweeper](https://prodigresser.github.io/project-1/)***
+You can play my game here: ***[Sushi Sweeper 🍣](https://prodigresser.github.io/project-1/)***
 
 ### What is Minesweeper? (Sushi Sweeper)
 Minesweeper is a classic Windows PC game. The idea is to decide which tile mines are hidden under based on numbered clues hidden under the remaining tiles -
@@ -238,7 +236,7 @@ In keeping with the chosen theme and style of game I think a minimal 'takeaway m
 Adjusting the menu to reveal the game details works well for the game too -  including a timer, game score and the number of unflagged mines.
 
 ## In Conclusion
-### Future Features]
+### Future Features
 
 1. Fix scoreboard to display 'Top 3'
 2. Add responsive features to screen sizes, including a landscape menu.
