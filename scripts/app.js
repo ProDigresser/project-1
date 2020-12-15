@@ -447,7 +447,7 @@ function orderAndAddScores() {
   const array = highScores
     .sort((playerA, playerB) => playerB.score - playerA.score)
     .map((player, i) => {
-      if (i < 3 && player.name !== null) {
+      if (i <= 3 && player.name !== null) {
         return `<ul>
           Ninja ${player.name} has 
           ${player.score} points.</ul>`
