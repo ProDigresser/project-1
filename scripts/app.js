@@ -144,16 +144,16 @@ function startGame() {
             score = score * 2
           } else if (tick < 120) {
             score = score * 1.5
-          } 
+          }
 
-          if (gameDifficulty === 3.5){
+          if (gameDifficulty === 3.5) {
             finalScore = score * 2
-          } else if (gameDifficulty === 4.5){
+          } else if (gameDifficulty === 4.5) {
             finalScore = score * 1.5
           } else {
             finalScore = score
           }
-           
+
           setTimeout(function () {
             alert(`Congratulations! You ate all the sushi. \n Your final score is ${finalScore}!`)
             if (highScores.length < 3 || finalScore > Number(highScores[2].score)) {
@@ -374,9 +374,9 @@ startBtn.addEventListener('click', (e) => {
       width = 20
     }
     if (gameSpice === 'easy') {
-      gameDifficulty = 6
+      gameDifficulty = 7
     } else if (gameSpice === 'normal') {
-      gameDifficulty = 4.5
+      gameDifficulty = 5
     } else {
       gameDifficulty = 3.5
     }
@@ -446,12 +446,15 @@ function orderAndAddScores() {
 
   const array = highScores
     .sort((playerA, playerB) => playerB.score - playerA.score)
-    .map(player => {
+    .map((player, i) => {
+      if (i < 3) {
+        return `<ul>
+          Ninja ${player.name} has 
+          ${player.score} points.</ul>`
+      } else {
+        return
+      }
 
-      return `<ul>
-        Ninja ${player.name} has 
-        ${player.score} points.
-      </ul>`
     })
 
   winners.innerHTML = array.join('')

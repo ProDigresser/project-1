@@ -1,7 +1,7 @@
 # project-1
 General Assembly Project 1
 ![ga_cog_large_red_rgb](https://cloud.githubusercontent.com/assets/40461/8183776/469f976e-1432-11e5-8199-6ac91363302b.png)
-### General Assembly Software Engineering Imersive 
+### General Assembly Software Engineering Immersive 
 # Project 1 - Sushi Sweeper
 
 		
@@ -43,7 +43,7 @@ Minesweeper is a classic Windows PC game. The idea is to decide which tile mines
 - HTML5 & CSS3
 - JavaScript (ES6)
 - Git & GitHub
-- Font Rescouces (Font Space)
+- Font Resources (Font Space)
 
 ## The Game
 In order to develop this game I identified a few core pieces of logic that would important to making this game playable - 
@@ -254,4 +254,8 @@ For the future I intend to work more in a methodical way when it comes to format
 
 Thats all folks! Enjoy the game.
 
-[![game_link](screenshots/full-game.png)](https://prodigresser.github.io/project-1/)
+### Fixes and Adjustments 
+
+Link --> [🍙](https://prodigresser.github.io/project-1/)
+
+![sushi_sweeper](screenshots/full-game.png)]
