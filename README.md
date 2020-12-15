@@ -253,6 +253,9 @@ For the future I intend to work more in a methodical way when it comes to format
 Thats all folks! Enjoy the game.
 
 ### Fixes and Adjustments 
+- Fixed scoreboard to remove null value names
+- Scoreboard only shows top 3 scores
+- Difficulty balance adjustment
 
 Link --> [🍙](https://prodigresser.github.io/project-1/)
 
