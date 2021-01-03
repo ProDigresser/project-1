@@ -259,4 +259,4 @@ Thats all folks! Enjoy the game.
 
 Link --> [🍙](https://prodigresser.github.io/project-1/)
 
-![sushi_sweeper](screenshots/full-game.png)]
+![sushi_sweeper](screenshots/full-game.png)
