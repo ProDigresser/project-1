@@ -256,6 +256,7 @@ That's all folks! Enjoy the game.
 - Fixed scoreboard to remove null value names
 - Scoreboard only shows top 3 scores
 - Difficulty balance adjustment
+- Removed superfluous curly braces for one line statements
 
 Link --> [🍙](https://prodigresser.github.io/project-1/)
 

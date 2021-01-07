@@ -170,9 +170,9 @@ function startGame() {
           if (bombCount !== null) {
             cell.innerHTML = bombCount
           } else {
-            if (!cellRight.classList.contains('safe')) { mineCheck(cellRight) }
-            if (!cellBottomRight.classList.contains('safe')) { mineCheck(cellBottomRight) }
-            if (!cellBottom.classList.contains('safe')) { mineCheck(cellBottom) }
+            if (!cellRight.classList.contains('safe')) mineCheck(cellRight)
+            if (!cellBottomRight.classList.contains('safe')) mineCheck(cellBottomRight)
+            if (!cellBottom.classList.contains('safe')) mineCheck(cellBottom)
           }
 
         } else if (Number(cell.id) === boundTopRight) {
@@ -180,9 +180,9 @@ function startGame() {
           if (bombCount !== null) {
             cell.innerHTML = bombCount
           } else {
-            if (!cellBottom.classList.contains('safe')) { mineCheck(cellBottom) }
-            if (!cellBottomLeft.classList.contains('safe')) { mineCheck(cellBottomLeft) }
-            if (!cellLeft.classList.contains('safe')) { mineCheck(cellLeft) }
+            if (!cellBottom.classList.contains('safe')) mineCheck(cellBottom) 
+            if (!cellBottomLeft.classList.contains('safe')) mineCheck(cellBottomLeft) 
+            if (!cellLeft.classList.contains('safe')) mineCheck(cellLeft) 
           }
 
         } else if (Number(cell.id) === boundBottomLeft) {
@@ -190,9 +190,9 @@ function startGame() {
           if (bombCount !== null) {
             cell.innerHTML = bombCount
           } else {
-            if (!cellRight.classList.contains('safe')) { mineCheck(cellRight) }
-            if (!cellTopRight.classList.contains('safe')) { mineCheck(cellTopRight) }
-            if (!cellTop.classList.contains('safe')) { mineCheck(cellTop) }
+            if (!cellRight.classList.contains('safe')) mineCheck(cellRight)
+            if (!cellTopRight.classList.contains('safe')) mineCheck(cellTopRight)
+            if (!cellTop.classList.contains('safe')) mineCheck(cellTop)
           }
 
         } else if (Number(cell.id) === boundBottomRight) {
@@ -200,9 +200,9 @@ function startGame() {
           if (bombCount !== null) {
             cell.innerHTML = bombCount
           } else {
-            if (!cellTop.classList.contains('safe')) { mineCheck(cellTop) }
-            if (!cellTopLeft.classList.contains('safe')) { mineCheck(cellTopLeft) }
-            if (!cellLeft.classList.contains('safe')) { mineCheck(cellLeft) }
+            if (!cellTop.classList.contains('safe')) mineCheck(cellTop)
+            if (!cellTopLeft.classList.contains('safe')) mineCheck(cellTopLeft)
+            if (!cellLeft.classList.contains('safe')) mineCheck(cellLeft)
           }
 
         } else if (Number(cell.id) < width) {
@@ -210,11 +210,11 @@ function startGame() {
           if (bombCount !== null) {
             cell.innerHTML = bombCount
           } else {
-            if (!cellBottom.classList.contains('safe')) { mineCheck(cellBottom) }
-            if (!cellBottomRight.classList.contains('safe')) { mineCheck(cellBottomRight) }
-            if (!cellBottomLeft.classList.contains('safe')) { mineCheck(cellBottomLeft) }
-            if (!cellLeft.classList.contains('safe')) { mineCheck(cellLeft) }
-            if (!cellRight.classList.contains('safe')) { mineCheck(cellRight) }
+            if (!cellBottom.classList.contains('safe')) mineCheck(cellBottom)
+            if (!cellBottomRight.classList.contains('safe')) mineCheck(cellBottomRight)
+            if (!cellBottomLeft.classList.contains('safe')) mineCheck(cellBottomLeft)
+            if (!cellLeft.classList.contains('safe')) mineCheck(cellLeft)
+            if (!cellRight.classList.contains('safe')) mineCheck(cellRight)
           }
 
         } else if (Number(cell.id) % width === width - 1) {
@@ -222,11 +222,11 @@ function startGame() {
           if (bombCount !== null) {
             cell.innerHTML = bombCount
           } else {
-            if (!cellBottom.classList.contains('safe')) { mineCheck(cellBottom) }
-            if (!cellBottomLeft.classList.contains('safe')) { mineCheck(cellBottomLeft) }
-            if (!cellTop.classList.contains('safe')) { mineCheck(cellTop) }
-            if (!cellTopLeft.classList.contains('safe')) { mineCheck(cellTopLeft) }
-            if (!cellLeft.classList.contains('safe')) { mineCheck(cellLeft) }
+            if (!cellBottom.classList.contains('safe')) mineCheck(cellBottom)
+            if (!cellBottomLeft.classList.contains('safe')) mineCheck(cellBottomLeft)
+            if (!cellTop.classList.contains('safe')) mineCheck(cellTop)
+            if (!cellTopLeft.classList.contains('safe')) mineCheck(cellTopLeft)
+            if (!cellLeft.classList.contains('safe')) mineCheck(cellLeft)
           }
 
         } else if (Number(cell.id) > (width ** 2) - width - 1) {
@@ -234,11 +234,11 @@ function startGame() {
           if (bombCount !== null) {
             cell.innerHTML = bombCount
           } else {
-            if (!cellTopRight.classList.contains('safe')) { mineCheck(cellTopRight) }
-            if (!cellTopLeft.classList.contains('safe')) { mineCheck(cellTopLeft) }
-            if (!cellTop.classList.contains('safe')) { mineCheck(cellTop) }
-            if (!cellRight.classList.contains('safe')) { mineCheck(cellRight) }
-            if (!cellLeft.classList.contains('safe')) { mineCheck(cellLeft) }
+            if (!cellTopRight.classList.contains('safe')) mineCheck(cellTopRight)
+            if (!cellTopLeft.classList.contains('safe')) mineCheck(cellTopLeft)
+            if (!cellTop.classList.contains('safe')) mineCheck(cellTop)
+            if (!cellRight.classList.contains('safe')) mineCheck(cellRight)
+            if (!cellLeft.classList.contains('safe')) mineCheck(cellLeft)
           }
 
         } else if (Number(cell.id) % width === 0) {
@@ -246,11 +246,11 @@ function startGame() {
           if (bombCount !== null) {
             cell.innerHTML = bombCount
           } else {
-            if (!cellBottomRight.classList.contains('safe')) { mineCheck(cellBottomRight) }
-            if (!cellBottom.classList.contains('safe')) { mineCheck(cellBottom) }
-            if (!cellTopRight.classList.contains('safe')) { mineCheck(cellTopRight) }
-            if (!cellTop.classList.contains('safe')) { mineCheck(cellTop) }
-            if (!cellRight.classList.contains('safe')) { mineCheck(cellRight) }
+            if (!cellBottomRight.classList.contains('safe')) mineCheck(cellBottomRight)
+            if (!cellBottom.classList.contains('safe')) mineCheck(cellBottom)
+            if (!cellTopRight.classList.contains('safe')) mineCheck(cellTopRight)
+            if (!cellTop.classList.contains('safe')) mineCheck(cellTop)
+            if (!cellRight.classList.contains('safe')) mineCheck(cellRight)
           }
 
         } else {
@@ -259,14 +259,14 @@ function startGame() {
             cell.innerHTML = bombCount
 
           } else {
-            if (!cellTop.classList.contains('safe')) { mineCheck(cellTop) }
-            if (!cellTopLeft.classList.contains('safe')) { mineCheck(cellTopLeft) }
-            if (!cellLeft.classList.contains('safe')) { mineCheck(cellLeft) }
-            if (!cellBottomLeft.classList.contains('safe')) { mineCheck(cellBottomLeft) }
-            if (!cellBottom.classList.contains('safe')) { mineCheck(cellBottom) }
-            if (!cellBottomRight.classList.contains('safe')) { mineCheck(cellBottomRight) }
-            if (!cellRight.classList.contains('safe')) { mineCheck(cellRight) }
-            if (!cellTopRight.classList.contains('safe')) { mineCheck(cellTopRight) }
+            if (!cellTop.classList.contains('safe')) mineCheck(cellTop)
+            if (!cellTopLeft.classList.contains('safe')) mineCheck(cellTopLeft)
+            if (!cellLeft.classList.contains('safe')) mineCheck(cellLeft)
+            if (!cellBottomLeft.classList.contains('safe')) mineCheck(cellBottomLeft)
+            if (!cellBottom.classList.contains('safe')) mineCheck(cellBottom)
+            if (!cellBottomRight.classList.contains('safe')) mineCheck(cellBottomRight)
+            if (!cellRight.classList.contains('safe')) mineCheck(cellRight)
+            if (!cellTopRight.classList.contains('safe')) mineCheck(cellTopRight)
           }
         }
 
@@ -435,7 +435,9 @@ function highScoreInput() {
   const newName = prompt('You Made The Scoreboard! Please enter your name -')
   const newScore = finalScore
   const player = { name: newName, score: newScore }
-  highScores.push(player)
+  if (player.name !== '') {
+    highScores.push(player)
+  }
   if (localStorage) {
     localStorage.setItem('scores', JSON.stringify(highScores))
   }
