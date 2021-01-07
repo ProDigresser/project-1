@@ -44,18 +44,18 @@ Minesweeper is a classic Windows PC game. The idea is to decide which tile mines
 - Font Resources (Font Space)
 
 ## The Game
-In order to develop this game I identified a few core pieces of logic that would important to making this game playable - 
+In order to develop this game, I identified a few core pieces of logic that would important to making this game playable - 
 
-1. To generate and populate the board with 'mines'
+1. To generate and populate the board with 'mines',
   - Set a board size
   - Set mines to unique cells (no repeats)
-2. Use logic to define the game boundaries
+2. Use logic to define the game boundaries,
   - Ensure that the logic is scalable to different board sizes
   - Use the logic to define the corners and edges of the board
-3. To check adjacent cells when a cell without a mine is selected
+3. To check adjacent cells when a cell without a mine is selected,
   - Ensure only valid cells are checked
   - Use boundary logic to execute
-4. To for an adjacent checker to run recursively if it detects more safe cells
+4. To for an adjacent checker to run recursively if it detects more safe cells,
   - Create logic to prevent the algorithm to run perpetually
   - Ensure the checker runs accurately, and does not select mine cells in the process 
 
@@ -65,7 +65,7 @@ The game is played around a grid with randomly assigned 'mine' components. It wa
 
 This block of code receives a variable of 'width' and uses it in conjunction with a for loop to make an array of cells while pushing each cell to the 'grid' component. 
 
-For ease of navigation, debugging and legibility in functions that select these cells further down the line - i also assign an id of the cells index to each cell.
+For ease of navigation, debugging and legibility in functions that select these cells further down the line - I also assign an id of the cells index to each cell.
 
 ```javascript 
 	  for (let i = 0; i < width ** 2; i++) {
@@ -103,7 +103,7 @@ This block of code is a random number generator that creates an array of cells w
 	    cellArray[rngArray[i]].classList.add('bomb')
 	  }
 ```
-Here you see the randomly assigned cells highlighted in a different colour border:  
+Here, you see the randomly assigned cells highlighted in a different colour border:  
 
 ![grid_bomb_highlight](screenshots/bomb-grid.png)
 
@@ -111,7 +111,7 @@ Here you see the randomly assigned cells highlighted in a different colour borde
 
 #### The Boundaries & Adjacent Cells
   
-For a game of this type to function properly the boundaries need to be clearly set. If these parameters are not set properly then functions and selectors are prone to wrap around the grid, select the wrong element or not function as intended.
+For a game of this type to function properly, the boundaries need to be clearly set. If these parameters are not set properly then functions and selectors are prone to wrap around the grid, select the wrong element or not function as intended.
 
 I found that many of the calculations were similar when checking for local mines could be assigned at the beginning of the game. This made for much more legible and scalable code down the line. 
 
@@ -160,7 +160,7 @@ The flow of the algorithm is like so:-
   - If there are no local mines, select each unchecked adjacent cell and go to 1.
 2. Add number of mines to the cell and stop.
 
-At the beginning of each run of the algorithm the function selects the local cells in case they are called later - 
+At the beginning of each run of the algorithm, the function selects the local cells in case they are called later - 
 
 ```javascript 
       const cellTop = document.getElementById(idTop)
@@ -224,7 +224,7 @@ In order to convey information on the screen in a compelling way - I chose brigh
 ![flag_details](screenshots/flag-details.png)
 ![game_win](screenshots/game-win.png)
 
-For fonts i used Impact for the game and Vabulous for the menu. Impact is a common font, thick and easy to read. 
+For fonts I used Impact for the game and Vabulous for the menu. Impact is a common font, thick and easy to read. 
 
 Vabulous on the other hand has a Japanese paintbrush effect to be more in keeping with the aesthetic. Here is a font sample - 
 
@@ -250,7 +250,7 @@ This project was a big learning experience, with it built from the ground up. I 
 
 For the future I intend to work more in a methodical way when it comes to formatting and developing my code taking extra care to execute the control and flow of my code.
 
-Thats all folks! Enjoy the game.
+That's all folks! Enjoy the game.
 
 ### Fixes and Adjustments 
 - Fixed scoreboard to remove null value names
